@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-    before_action :authenticate_request
-  
+    
+    before_action :authenticate_request, except: [:show, :create]
     before_action :set_user, only: [:show, :update, :destroy]
   
     # GET /users
@@ -12,7 +12,8 @@ class UsersController < ApplicationController
   
     # GET /users/1
     def show
-        render json: @user
+         # neste caso tenho tbm a seguinte opção para a view :advanced
+        render json: UserBlueprint.render(@user, view: :normal)
     end
   
     # POST /users

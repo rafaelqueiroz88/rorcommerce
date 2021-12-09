@@ -24,3 +24,6 @@ gem 'devise'
 gem 'jwt'
 gem 'simple_command'
 gem 'rack-cors'
+# https://github.com/procore/blueprinter
+gem 'blueprinter'
+gem 'oj'
