@@ -1,14 +1,14 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  password: postgres
+  username: italo
+  password: italo
   pool: 5
   timeout: 5000
   host: localhost
 development:
   <<: *default
-  database: rorapi-development
+  database: rorapi_development
 production:
   <<: *default
   database: rorapi-production
