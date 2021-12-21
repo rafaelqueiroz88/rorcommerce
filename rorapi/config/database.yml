@@ -2,13 +2,16 @@ default: &default
   adapter: postgresql
   encoding: unicode
   username: postgres
-  password: postgres
+  password: admin
   pool: 5
   timeout: 5000
-  host: localhost
+  host: 192.168.15.3
 development:
   <<: *default
   database: rorapi-development
+test:
+  <<: *default
+  database: rorapi-test
 production:
   <<: *default
   database: rorapi-production
